@@ -1,7 +1,5 @@
-from back_test import backtest
+from back_test.backtest import BackTest
 
-bt = backtest()
+bt = BackTest("PETR4.SA", "1d")
 
-print(bt.name)
-
-print("Hello World")
+bt.media_high_low()
