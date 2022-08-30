@@ -1,3 +1,6 @@
-#MetaTrader5
+MetaTrader5
 pandas
 yfinance
+pandas-ta
+plotly
+numpy
