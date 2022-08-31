@@ -32,7 +32,7 @@ class BackTest(PlotData):
         self.df['signal'] = 0
 
         # Logic
-        buy_position = 0
+        handler_position = False
         for row in self.df.itertuples():
 
             # buy_position = False
@@ -47,8 +47,23 @@ class BackTest(PlotData):
             #     pass
             #
             # # Bloco de Saida
-            print(row.buy_position)
-            time.sleep(0.5)
+
+            if row.Low < row.med_inf > row.High:
+                if handler_position is False:
+                    self.df.at[row.Index, 'signal'] = 1
+                    self.df.at[row.Index, 'buy_position'] = 1
+                    handler_position = True
+
+            if handler_position:
+                self.df.at[row.Index, 'buy_position'] = 1
+
+            if row.High > row.med_sup > row.Low:
+                if handler_position:
+                    self.df.at[row.Index, 'signal'] = 1
+                    self.df.at[row.Index, 'buy_position'] = 0
+                    handler_position = False
+
+
 
 
     def get_period(self):
