@@ -7,70 +7,104 @@ import time
 
 
 class BackTest(PlotData):
-    med_sup = 10
-
+    df = None
     # PD Settings
     pd.set_option('display.max_rows', None)
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', None)
 
-    def __init__(self, ticker, interval, period):
-        self.ticker = ticker
-        self.interval = interval
-        self.period = period  # 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
-        self.df = self.extract_data()
+    o_order, c_order, orders = [], [], []
+
+    def __init__(self):
+        self.df = self.csv_profit('back_test/data/PETR4_B_0_Diário.csv')
+
+    @staticmethod
+    def csv_profit(csv):
+        colnames = ['Asset', 'Date', 'Open', 'High', 'Low', 'Close', 'Vol_Fin', 'Vol']
+        df = pd.read_csv(csv, names=colnames, header=None, sep=';')
+
+        df['Date'] = pd.to_datetime(df['Date'], infer_datetime_format=True)
+        df = df.set_index(df['Date']).sort_index()
+
+        df = df[['Open', 'High', 'Low', 'Close', 'Vol']].copy()
+
+        df['Open'] = df['Open'].str.replace(',', '.').astype('float')
+        df['High'] = df['High'].str.replace(',', '.').astype('float')
+        df['Low'] = df['Low'].str.replace(',', '.').astype('float')
+        df['Close'] = df['Close'].str.replace(',', '.').astype('float')
+
+        return df
 
     def media_high_low(self):
+        # Number
+        med_sup = 10
 
         # Indicadores
-        self.df['med_sup'] = self.df['High'].rolling(10).mean()
-        self.df['med_inf'] = self.df['Low'].rolling(10).mean()
+        self.df['med_sup'] = self.df['High'].rolling(med_sup).mean()
+        self.df['med_inf'] = self.df['Low'].rolling(med_sup).mean()
         self.df = self.df.round(2)
 
         # Paramters
         self.df['buy_position'] = 0
         self.df['signal'] = 0
 
+        # PRESET DATE
+        self.df = self.df.loc['2020-10-07':]
+
         # Logic
         handler_position = False
         for row in self.df.itertuples():
 
-            # buy_position = False
-            #
-            # # Bloco de Entrada
-            # if buy_position is False and row.Low < row.med_inf < row.High:
-            #     self.df.at[row.Index, 'signal'] = 1
-            #     self.df.at[row.Index, 'buyPosition'] = 1
-            #     buy_position = True
-            #
-            # if buy_position is True and row.High > row.med_sup < row.Low:
-            #     pass
-            #
-            # # Bloco de Saida
+            # Bloco de Entrada
+            if not handler_position and row.High > row.med_inf > row.Low:
+                self.df.at[row.Index, 'signal'] = 1
+                self.df.at[row.Index, 'buy_position'] = 1
+                handler_position = True
 
-            if row.Low < row.med_inf > row.High:
-                if handler_position is False:
-                    self.df.at[row.Index, 'signal'] = 1
-                    self.df.at[row.Index, 'buy_position'] = 1
-                    handler_position = True
+                self.open_order(row.Index, 100, row.med_inf, 'c')
 
             if handler_position:
                 self.df.at[row.Index, 'buy_position'] = 1
 
-            if row.High > row.med_sup > row.Low:
-                if handler_position:
-                    self.df.at[row.Index, 'signal'] = 1
-                    self.df.at[row.Index, 'buy_position'] = 0
-                    handler_position = False
+            # Bloco de saida
+            if handler_position and row.High > row.med_sup > row.Low:
+                self.df.at[row.Index, 'signal'] = 1
+                self.df.at[row.Index, 'buy_position'] = 0
+                handler_position = False
 
+                self.close_order(row.Index, row.med_sup)
 
+    def open_order(self, _open, _qntd, _preco_compra, lado):
+        self.o_order.append({
+            'abertura': _open,
+            'qtd': _qntd,
+            'preco_compra': _preco_compra,
+            'lado': lado,
+        })
 
+    def close_order(self, _close, _preco_venda):
+        self.c_order.append({
+            'fechamneto': _close,
+            'preco_venda': _preco_venda,
+        })
 
-    def get_period(self):
-        pass
+    def show_orders(self):
+        res = []
+        for i in range(len(self.o_order)):
+            aberutra = self.o_order[i].get('abertura')
+            fechamento = self.c_order[i].get('fechamneto')
+            tempo_op = fechamento - aberutra
+            qnt = self.o_order[i].get('qtd')
+            lado = self.o_order[i].get('lado')
+            preco_compra = self.o_order[i].get('preco_compra')
+            preco_venda = self.c_order[i].get('preco_venda')
+            resultado = (preco_venda - preco_compra) * qnt
+            resultado_p = (resultado / (preco_compra * qnt)) * 100
+            res.append([aberutra, fechamento, tempo_op, qnt, lado, preco_compra, preco_venda, resultado, resultado_p])
 
-    def extract_data(self):
-        raw_data = yf.download(self.ticker, period='1y', interval=self.interval, auto_adjust=True)
-        raw_data = raw_data[['Open', 'High', 'Low', 'Close', 'Volume']].copy()
+        col = ['abertura', 'fechamento', 'tempo', 'qntd', 'lado', 'preco_compra', 'preco_venda', 'resultado', 'p_res']
+        df = pd.DataFrame(res, columns=col)
+        df = df.round(2)
+        df['total'] = df['resultado'].cumsum()
 
-        return raw_data
+        return df
