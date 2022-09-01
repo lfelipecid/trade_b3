@@ -13,10 +13,12 @@ class BackTest(PlotData):
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', None)
 
-    o_order, c_order, orders = [], [], []
+    open_ord, close_ord, orders = [], [], []
 
-    def __init__(self):
-        self.df = self.csv_profit('back_test/data/PETR4_B_0_Diário.csv')
+    def __init__(self, ticker):
+        # self.df = self.csv_profit('back_test/data/PETR4_B_0_Diário.csv')
+        self.df = yf.download(ticker+".SA", period='5y', interval='1d', auto_adjust=True)
+
 
     @staticmethod
     def csv_profit(csv):
@@ -49,7 +51,7 @@ class BackTest(PlotData):
         self.df['signal'] = 0
 
         # PRESET DATE
-        self.df = self.df.loc['2020-10-07':]
+        # self.df = self.df.loc['2020-10-07':]
 
         # Logic
         handler_position = False
@@ -75,29 +77,35 @@ class BackTest(PlotData):
                 self.close_order(row.Index, row.med_sup)
 
     def open_order(self, _open, _qntd, _preco_compra, lado):
-        self.o_order.append({
+        self.open_ord.append({
             'abertura': _open,
+            'fechamento':  None,
             'qtd': _qntd,
             'preco_compra': _preco_compra,
+            'preco_venda': None,
             'lado': lado,
         })
 
     def close_order(self, _close, _preco_venda):
-        self.c_order.append({
+        self.close_ord.append({
             'fechamneto': _close,
             'preco_venda': _preco_venda,
         })
 
     def show_orders(self):
         res = []
-        for i in range(len(self.o_order)):
-            aberutra = self.o_order[i].get('abertura')
-            fechamento = self.c_order[i].get('fechamneto')
+
+        # print(len(self.open_ord))
+        # print(len(self.close_ord))
+
+        for i in range(len(self.close_ord)):
+            aberutra = self.open_ord[i].get('abertura')
+            fechamento = self.close_ord[i].get('fechamneto')
             tempo_op = fechamento - aberutra
-            qnt = self.o_order[i].get('qtd')
-            lado = self.o_order[i].get('lado')
-            preco_compra = self.o_order[i].get('preco_compra')
-            preco_venda = self.c_order[i].get('preco_venda')
+            qnt = self.open_ord[i].get('qtd')
+            lado = self.open_ord[i].get('lado')
+            preco_compra = self.open_ord[i].get('preco_compra')
+            preco_venda = self.close_ord[i].get('preco_venda')
             resultado = (preco_venda - preco_compra) * qnt
             resultado_p = (resultado / (preco_compra * qnt)) * 100
             res.append([aberutra, fechamento, tempo_op, qnt, lado, preco_compra, preco_venda, resultado, resultado_p])
@@ -106,5 +114,11 @@ class BackTest(PlotData):
         df = pd.DataFrame(res, columns=col)
         df = df.round(2)
         df['total'] = df['resultado'].cumsum()
+        df.loc[df.resultado > 0, 'operacao'] = 'win'
+        df.loc[df.resultado <= 0, 'operacao'] = 'loss'
+
+        # Filter something u want
+        mask = df['operacao'].str.contains('loss')
+        # print(df[mask])
 
         return df
