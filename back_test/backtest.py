@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from back_test.plot.plot import PlotData
 import numpy as np
 import time
+import json
 
 
 class BackTest(PlotData):
@@ -15,10 +16,10 @@ class BackTest(PlotData):
 
     open_ord, close_ord, orders = [], [], []
 
-    def __init__(self, ticker):
-        # self.df = self.csv_profit('back_test/data/PETR4_B_0_Diário.csv')
-        self.df = yf.download(ticker+".SA", period='5y', interval='1d', auto_adjust=True)
+    def __init__(self):
 
+        self.df = self.csv_profit('back_test/data/PETR4_B_0_Diário.csv')
+        # self.df = yf.download(ticker+".SA", period='5y', interval='1d', auto_adjust=True)
 
     @staticmethod
     def csv_profit(csv):
@@ -79,7 +80,7 @@ class BackTest(PlotData):
     def open_order(self, _open, _qntd, _preco_compra, lado):
         self.open_ord.append({
             'abertura': _open,
-            'fechamento':  None,
+            'fechamento': None,
             'qtd': _qntd,
             'preco_compra': _preco_compra,
             'preco_venda': None,
@@ -122,3 +123,22 @@ class BackTest(PlotData):
         # print(df[mask])
 
         return df
+
+    def download_data(self, interval='1d', period='5y'):
+        date = datetime.now().strftime('%Y-%m-%d')
+
+        # Load JSON FILE
+        with open('back_test/ticker.json', 'r') as f:
+            data = json.load(f)
+            replace_data = ['[', ']', '"']
+
+            for n in replace_data:
+                data = data.replace(n, '')
+
+            data = data.split(',')
+
+        # Download Data from YFINACE
+        for tick in data:
+            raw_data = yf.download(tick + '.SA', interval=interval, period=period, auto_adjust=True)
+            raw_data.to_csv(f'back_test/data/{tick}_{interval}_{period}_{date}.csv')
+
