@@ -128,7 +128,7 @@ class BackTest(PlotData):
         date = datetime.now().strftime('%Y-%m-%d')
 
         # Load JSON FILE
-        with open('back_test/ticker.json', 'r') as f:
+        with open('back_test/tickers.json', 'r') as f:
             data = json.load(f)
             replace_data = ['[', ']', '"']
 
@@ -137,8 +137,19 @@ class BackTest(PlotData):
 
             data = data.split(',')
 
-        # Download Data from YFINACE
-        for tick in data:
-            raw_data = yf.download(tick + '.SA', interval=interval, period=period, auto_adjust=True)
-            raw_data.to_csv(f'back_test/data/{tick}_{interval}_{period}_{date}.csv')
+        new_dict = {}
+        for i in data:
+            new_dict[i] = {
+                'name': None,
+                'month_vol': 0,
+                'results': {
+                    'strategyName': {
 
+                    }
+                }
+            }
+
+    # # Download Data from YFINACE
+    # for tick in data:
+    #     raw_data = yf.download(tick + '.SA', interval=interval, period=period, auto_adjust=True)
+    #     raw_data.to_csv(f'back_test/data/{tick}_{interval}_{period}_{date}.csv')
