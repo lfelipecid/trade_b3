@@ -5,6 +5,7 @@ from back_test.plot.plot import PlotData
 import numpy as np
 import time
 import json
+import os
 
 
 class BackTest(PlotData):
@@ -125,31 +126,28 @@ class BackTest(PlotData):
         return df
 
     def download_data(self, interval='1d', period='5y'):
+        dir_path = './back_test/data/'
         date = datetime.now().strftime('%Y-%m-%d')
 
-        # Load JSON FILE
+        # Main LOCAL DB
         with open('back_test/tickers.json', 'r') as f:
             data = json.load(f)
-            replace_data = ['[', ']', '"']
 
-            for n in replace_data:
-                data = data.replace(n, '')
-
-            data = data.split(',')
-
-        new_dict = {}
         for i in data:
-            new_dict[i] = {
-                'name': None,
-                'month_vol': 0,
-                'results': {
-                    'strategyName': {
+            # TODO: or BIG then X days
+            if data[i].get('month_vol') == 0:
+                for f in os.listdir(dir_path):
+                    # Check if the same TICKER and
+                    if i in f:
+                        df = pd.read_csv(f'{dir_path + f}')
+                        df = df[-30:]
+                        # df.loc['Total'] = df.mean(axis=0)
 
-                    }
-                }
-            }
+                        print(df)
 
-    # # Download Data from YFINACE
-    # for tick in data:
-    #     raw_data = yf.download(tick + '.SA', interval=interval, period=period, auto_adjust=True)
-    #     raw_data.to_csv(f'back_test/data/{tick}_{interval}_{period}_{date}.csv')
+            break
+
+            # # Download Data from YFINACE
+            # for tick in data:
+            #     raw_data = yf.download(tick + '.SA', interval=interval, period=period, auto_adjust=True)
+            #     raw_data.to_csv(f'back_test/data/{tick}_{interval}_{period}_{date}.csv')

@@ -1,1 +1,980 @@
-"[\"WEGE3\", \"EGIE3\", \"ITUB4\", \"ENBR3\", \"EQTL3\", \"B3SA3\", \"ABEV3\", \"FLRY3\", \"PSSA3\", \"ARZZ3\", \"BBDC4\", \"RADL3\", \"PRIO3\", \"ITSA4\", \"LREN3\", \"HYPE3\", \"EZTC3\", \"TAEE11\", \"SLCE3\", \"RENT3\", \"PNVL3\", \"SMTO3\", \"BBAS3\", \"VIVA3\", \"VAMO3\", \"PARD3\", \"PETZ3\", \"SAPR11\", \"ODPV3\", \"MULT3\", \"AGRO3\", \"TOTS3\", \"INTB3\", \"LEVE3\", \"CSAN3\", \"ALUP11\", \"VIVT3\", \"MOVI3\", \"TRIS3\", \"ENEV3\", \"FIQE3\", \"KLBN11\", \"AMBP3\", \"BPAC11\", \"SOMA3\", \"VBBR3\", \"GMAT3\", \"SIMH3\", \"JHSF3\", \"CGRA4\", \"MATD3\", \"MDIA3\", \"GRND3\", \"BBSE3\", \"CAML3\", \"SANB11\", \"TASA4\", \"SULA11\", \"CRFB3\", \"UNIP6\", \"TIMS3\", \"VALE3\", \"TRPL4\", \"CPLE6\", \"TTEN3\", \"SOJA3\", \"BLAU3\", \"CPFE3\", \"GGPS3\", \"LOGG3\", \"VITT3\", \"CYRE3\", \"WIZS3\", \"RANI3\", \"AESB3\", \"ASAI3\", \"CXSE3\", \"LAVV3\", \"FRAS3\", \"AURA33\", \"CURY3\", \"BOAS3\", \"PLPL3\", \"CMIG4\", \"ROMI3\", \"MTRE3\", \"MLAS3\", \"RAPT4\", \"LJQQ3\", \"CMIN3\", \"ENAT3\", \"ARML3\", \"CARD3\", \"JALL3\", \"GOAU4\", \"LVTC3\", \"MGLU3\", \"YDUQ3\", \"NEOE3\", \"PTBL3\", \"GUAR3\", \"HAPV3\", \"TUPY3\", \"CSMG3\", \"SQIA3\", \"SUZB3\", \"KEPL3\", \"MRFG3\", \"BMOB3\", \"OFSA3\", \"JSLG3\", \"PETR4\", \"CLSA3\", \"MRVE3\", \"FESA4\", \"MYPK3\", \"BRBI11\", \"ALLD3\", \"SHUL4\", \"SBSP3\", \"PORT3\", \"VVEO3\", \"CIEL3\", \"RDOR3\", \"QUAL3\", \"POMO4\", \"LWSA3\", \"G2DI33\", \"DESK3\", \"SBFG3\", \"BPAN4\", \"ESPA3\", \"BRIT3\", \"ALSO3\", \"SYNE3\", \"RECV3\", \"UGPA3\", \"POSI3\", \"VULC3\", \"RAIZ4\", \"RAIL3\", \"PCAR3\", \"USIM5\", \"TFCO4\", \"ETER3\", \"ABCB4\", \"ELET3\", \"DXCO3\", \"GGBR4\", \"DEXP3\", \"BRSR6\", \"STBP3\", \"MILS3\", \"SEER3\", \"NTCO3\", \"MODL11\", \"JBSS3\", \"BRML3\", \"BEES3\", \"BEEF3\", \"BRAP4\", \"NGRD3\", \"EVEN3\"]"
+{
+  "WEGE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "EGIE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ITUB4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ENBR3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "EQTL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "B3SA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ABEV3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "FLRY3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PSSA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ARZZ3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BBDC4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RADL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PRIO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ITSA4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "LREN3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "HYPE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "EZTC3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TAEE11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SLCE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RENT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PNVL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SMTO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BBAS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VIVA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VAMO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PARD3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PETZ3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SAPR11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ODPV3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MULT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "AGRO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TOTS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "INTB3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "LEVE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CSAN3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ALUP11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VIVT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MOVI3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TRIS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ENEV3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "FIQE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "KLBN11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "AMBP3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BPAC11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SOMA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VBBR3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "GMAT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SIMH3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "JHSF3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CGRA4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MATD3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MDIA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "GRND3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BBSE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CAML3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SANB11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TASA4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SULA11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CRFB3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "UNIP6": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TIMS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VALE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TRPL4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CPLE6": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TTEN3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SOJA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BLAU3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CPFE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "GGPS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "LOGG3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VITT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CYRE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "WIZS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RANI3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "AESB3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ASAI3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CXSE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "LAVV3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "FRAS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "AURA33": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CURY3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BOAS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PLPL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CMIG4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ROMI3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MTRE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MLAS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RAPT4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "LJQQ3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CMIN3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ENAT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ARML3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CARD3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "JALL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "GOAU4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "LVTC3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MGLU3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "YDUQ3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "NEOE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PTBL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "GUAR3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "HAPV3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TUPY3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CSMG3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SQIA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SUZB3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "KEPL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MRFG3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BMOB3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "OFSA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "JSLG3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PETR4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CLSA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MRVE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "FESA4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MYPK3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BRBI11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ALLD3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SHUL4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SBSP3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PORT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VVEO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "CIEL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RDOR3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "QUAL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "POMO4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "LWSA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "G2DI33": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "DESK3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SBFG3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BPAN4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ESPA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BRIT3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ALSO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SYNE3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RECV3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "UGPA3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "POSI3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "VULC3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RAIZ4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "RAIL3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "PCAR3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "USIM5": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "TFCO4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ETER3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ABCB4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "ELET3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "DXCO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "GGBR4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "DEXP3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BRSR6": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "STBP3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MILS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "SEER3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "NTCO3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "MODL11": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "JBSS3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BRML3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BEES3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BEEF3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "BRAP4": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "NGRD3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  },
+  "EVEN3": {
+    "name": null,
+    "month_vol": 0,
+    "strategy": {},
+    "last_update": null
+  }
+}
