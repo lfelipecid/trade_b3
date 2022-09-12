@@ -4,3 +4,6 @@ yfinance
 pandas-ta
 plotly
 numpy
+pymongo
+dnspython
+asyncio

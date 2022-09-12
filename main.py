@@ -4,8 +4,7 @@ import pandas as pd
 import json
 
 bt = BackTest()
-bt.download_data()
-
+bt.build_db()
 
 # bt.media_high_low()
 # # print(bt.df)
@@ -14,4 +13,3 @@ bt.download_data()
 
 # fig = bt.fig_candlestick(fixrange=True)
 # bt.fig_show(fig)
-

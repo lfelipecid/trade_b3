@@ -6,6 +6,7 @@ import numpy as np
 import time
 import json
 import os
+from warper_mongo.mongo_warper import cursor_tickers
 
 
 class BackTest(PlotData):
@@ -17,10 +18,10 @@ class BackTest(PlotData):
 
     open_ord, close_ord, orders = [], [], []
 
-    def __init__(self):
-
-        self.df = self.csv_profit('back_test/data/PETR4_B_0_Diário.csv')
-        # self.df = yf.download(ticker+".SA", period='5y', interval='1d', auto_adjust=True)
+    # def __init__(self):
+    #
+    #     self.df = self.csv_profit('back_test/data/PETR4_B_0_Diário.csv')
+    # self.df = yf.download(ticker+".SA", period='5y', interval='1d', auto_adjust=True)
 
     @staticmethod
     def csv_profit(csv):
@@ -38,6 +39,62 @@ class BackTest(PlotData):
         df['Close'] = df['Close'].str.replace(',', '.').astype('float')
 
         return df
+
+    def build_db(self):
+
+        list_b3 = [
+            'https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/search?language=pt-br&governance=16',
+            'https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/search?language=pt-br&governance=17',
+            'https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/search?language=pt-br&governance=18',
+        ]
+
+
+
+
+
+        # dir_path = './back_test/data/'
+        # date = datetime.now().strftime('%Y-%m-%d')
+        #
+        # # Main LOCAL DB
+        # with open('back_test/tickers.json', 'r') as f:
+        #     data = json.load(f)
+        #
+        # for i in data:
+        #     new_dict = {
+        #         i: {
+        #             'name': None,
+        #             'month_vol': 0,
+        #             'strategy': {},
+        #             'last_update': {},
+        #         }
+        #     }
+        #
+        #     print(new_dict)
+        #
+        #     break
+
+        # for i in data:
+        #     # TODO: or BIG then X days
+        #     if data[i].get('month_vol') == 0:
+        #         for f in os.listdir(dir_path):
+        #             # Check if the same TICKER and
+        #             if i in f:
+        #                 print(i)
+        #
+        #                 """ Open CSV """
+        #                 # df = pd.read_csv(f'{dir_path + f}')
+        #                 #
+        #                 # df = df[-31:-1]
+        #                 # df['vol_fin_MM'] = (df.Close * df.Volume) / 1000000
+        #                 # avg_vol = df.vol_fin_MM.mean()
+        #                 # print(df)
+        #
+        #     break
+        #
+        #     # # Download Data from YFINACE
+        #     # for tick in data:
+        #     #     raw_data = yf.download(tick + '.SA', interval=interval, period=period, auto_adjust=True)
+        #     #     raw_data.to_csv(f'back_test/data/{tick}_{interval}_{period}_{date}.csv')
 
     def media_high_low(self):
         # Number
@@ -124,30 +181,3 @@ class BackTest(PlotData):
         # print(df[mask])
 
         return df
-
-    def download_data(self, interval='1d', period='5y'):
-        dir_path = './back_test/data/'
-        date = datetime.now().strftime('%Y-%m-%d')
-
-        # Main LOCAL DB
-        with open('back_test/tickers.json', 'r') as f:
-            data = json.load(f)
-
-        for i in data:
-            # TODO: or BIG then X days
-            if data[i].get('month_vol') == 0:
-                for f in os.listdir(dir_path):
-                    # Check if the same TICKER and
-                    if i in f:
-                        df = pd.read_csv(f'{dir_path + f}')
-                        df = df[-30:]
-                        # df.loc['Total'] = df.mean(axis=0)
-
-                        print(df)
-
-            break
-
-            # # Download Data from YFINACE
-            # for tick in data:
-            #     raw_data = yf.download(tick + '.SA', interval=interval, period=period, auto_adjust=True)
-            #     raw_data.to_csv(f'back_test/data/{tick}_{interval}_{period}_{date}.csv')
